@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+    <h2>Adicionar Novo Usuário</h2>
+    <form action="process.php" method="post">
+        Nome: <input type="text" name="name"><br>
+        Email: <input type="text" name="email"><br>
+        <input type="submit" value="Adicionar">
+    </form>
+
+    <h2>Lista de Usuários</h2>
+    <div id="user-list">
+        <?php include 'display_users.php'; ?>
+    </div>
+</body>
+</html>
